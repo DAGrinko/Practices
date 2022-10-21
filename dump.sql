@@ -25,8 +25,12 @@ CREATE TABLE IF NOT EXISTS `Clothing_Store`.`Product` (
   `price_with_promocode` DECIMAL(10,2) NOT NULL,
   `discription` TINYTEXT NULL,
   `status` VARCHAR(45) NOT NULL,
+  `main_img` VARCHAR(45) NOT NULL,
+  `main_section` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `Id_UNIQUE` (`id` ASC) VISIBLE)
+  UNIQUE INDEX `Id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `main_img_UNIQUE` (`main_img` ASC) VISIBLE,
+  UNIQUE INDEX `main_section_UNIQUE` (`main_section` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
